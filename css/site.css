@@ -297,6 +297,10 @@ footer a:hover {
 
 .hero-default {
     background-color: var(--clr-hero-bg);
+    background-image: url('../images/bannerback.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     margin-block-end: 1em;
     padding-block: 4em;
 }
