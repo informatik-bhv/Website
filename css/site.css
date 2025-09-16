@@ -158,6 +158,8 @@ footer a:hover {
     border-radius: .5em;
     background-color: var(--clr-card-bg);
     box-shadow: 0 0 .5em var(--clr-card-shadow);
+    text-decoration: none;
+    color: inherit;
 }
 .home-card-thumbnail {
     border-top-left-radius: .5em;
@@ -181,10 +183,6 @@ footer a:hover {
 }
 .home-card-icon img {
     width: 100%;
-}
-.home-card {
-    text-decoration: none;
-    color: inherit;
 }
 .icon-card {
     margin-bottom: 1em;
@@ -271,9 +269,9 @@ footer a:hover {
     height: auto;
     width: auto;
 }
-.news-card-body {
+/* .news-card-body {
 
-}
+} */
 .news-card h2 {
     font-weight: 500;
 }
@@ -452,6 +450,18 @@ footer a:hover {
     font-weight: 500;
 }
 
+/* Zentralisierte Hover-Effekte für alle Card-Typen */
+.card:hover,
+.home-card:hover,
+.icon-card:hover,
+.horizontal-card:hover,
+.project-card:hover,
+.service-card:hover,
+.team-card:hover {
+/*    transition: transform 0.3s ease, box-shadow 0.3s ease; */
+/*    transform: translateY(-5px); */
+    box-shadow: 0 0 .37em var(--clr-card-hover-shadow);
+}
 
 .button-group {
     display: flex;
