@@ -156,8 +156,10 @@ footer a:hover {
 .home-card {
     margin-bottom: 1em;
     border-radius: .5em;
+    color: inherit;
     background-color: var(--clr-card-bg);
     box-shadow: 0 0 .5em var(--clr-card-shadow);
+    text-decoration: none;
 }
 .home-card-thumbnail {
     border-top-left-radius: .5em;
@@ -267,9 +269,6 @@ footer a:hover {
     max-width: 100%;
     height: auto;
     width: auto;
-}
-.news-card-body {
-    
 }
 .news-card h2 {
     font-weight: 500;
