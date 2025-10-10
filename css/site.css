@@ -172,14 +172,14 @@ footer a:hover {
 }
 .home-card-icon {
     position: relative;
-    top: calc(-64px - 1em);
+    top: calc(-50px - 1em);
     left: -1.5em;
-    height: 64px;
-    width: 64px;
+    height: 50px;
+    width: 50px;
     background-color: var(--clr-card-bg);
-    padding: 1em;
+    padding: 1.5em;
     border-radius: 50%;
-    margin-bottom: calc(-64px - 2em);
+    margin-bottom: calc(-50px - 2em);
 }
 .home-card-icon img {
     width: 100%;
@@ -250,6 +250,7 @@ footer a:hover {
     border: 1px solid var(--clr-card-border);
     border-radius: .5em;
     background-color: var(--clr-card-bg);
+    font-size: .9em;
     box-shadow: 0 0 .5em var(--clr-card-shadow);
 }
 .news-card:hover {
@@ -258,10 +259,11 @@ footer a:hover {
 .news-card-thumbnail {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-bottom: 1em;
     padding: 1em;
     border-radius: .5em;
-    background: var(--clr-card-image-bg);
+    background-color: var(--clr-tag-disabled-bg);
 }
 .news-card-thumbnail img {
     border-radius: .5em;
@@ -273,8 +275,14 @@ footer a:hover {
 .news-card h2 {
     font-weight: 500;
 }
-.news-card p {
-    font-size: .9em;
+.news-card-author {
+    display: flex;
+    align-items: center;
+    column-gap: .5em;
+}
+.news-card-author img {
+    height: 1em;
+    width: 1em;
 }
 .news-card hr {
     margin: 1em 0;
@@ -531,6 +539,19 @@ address a:hover {
     }
     header ul {
         display: flex;
+    }
+
+    .news-card {
+        display: flex;
+        column-gap: 1em;
+    }
+    .news-card-thumbnail {
+        flex: 0 0 calc(40% - .5em);
+        box-sizing: border-box;
+    }
+    .news-card-body {
+        flex: 0 0 calc(60% - .5em);
+        box-sizing: border-box;
     }
 
     .service-card {
