@@ -3,17 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codekreis - Allianz für Informatik, Innovation und Infrastruktur</title>
     <link rel="stylesheet" href="css/site.css">
-    <title>Codekreis</title>
+    <script>
+        function toggleNavigationMenu() {
+            document.getElementsByTagName('nav').item(0).classList.toggle('extended')
+        }
+        function collapseNavigationMenu() {
+            document.getElementsByTagName('nav').item(0).classList.remove('extended')
+        }
+    </script>
 </head>
 <body>
     <header>
         <div>
             <div class="navbar">
-                <a href=".">
+                <a href="#start">
                     <img id="logo" src="images/logo.svg" alt="Logo" height="32">
                 </a>
-                <button type="button" title="Navigation" onclick="document.getElementsByTagName('nav').item(0).classList.toggle('extended')">
+                <button type="button" title="Navigation" onclick="toggleNavigationMenu()">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -21,107 +29,218 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="news/">Neuigkeiten</a></li>
-                    <li><a href="services/">Dienste</a></li>
-                    <li><a href="events/">Veranstaltungen</a></li>
-                    <li><a href="projects/">Projekte</a></li>
-                    <li><a href="team/">Team</a></li>
+                    <li><a href="#news" onclick="collapseNavigationMenu()">Neuigkeiten</a></li>
+                    <li><a href="#services" onclick="collapseNavigationMenu()">Dienste</a></li>
+                    <li><a href="#events" onclick="collapseNavigationMenu()">Veranstaltungen</a></li>
+                    <li><a href="#projects" onclick="collapseNavigationMenu()">Projekte</a></li>
+                    <li><a href="#team" onclick="collapseNavigationMenu()">Team</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-        <section class="hero-default">
+        <section id="start">
             <div class="wrapper">
-                <h1>Codekreis</h1>
-                <p>Wir sind die Allianz für Informatik, Innovation und Infrastruktur und Anlaufstelle Nummer eins für Informatikinteressierte in Bremerhaven, da wir unterschiedliche Aktivitäten aus diesem unglaublich vielfältigen Bereich anbieten. Dabei stellen wir unterstützende Dienste bereit, planen spannende Veranstaltungen und entwickeln einzigartige Projekte.</p>
+                <div>
+                    <h1>Codekreis</h1>
+                    <h2>Allianz für Informatik, Innovation und Infrastruktur</h2>
+                    <p>Bei uns treffen Neugier, Technologie und Gemeinschaft aufeinander. Wir schaffen Räume zum Lernen, Experimentieren und Gestalten – mit Projekten, Events und Ideen, die Informatik in Bremerhaven nicht nur fördern, sondern voranbringen.</p>
+                    <a href="https://community.codekreis.de" class="main-btn">Jetzt beitreten</a>
+                </div>
+                <div class="frame">
+                    <img src="images/logo.svg" alt="Logo">
+                </div>
             </div>
         </section>
-        <section class="wrapper">
-            <h2>Gemeinsam die Zukunft gestalten.</h2>
-            <div class="grid-3">
-                <a href="services/" class="home-card">
-                    <img src="images/verfrüht-project.png" alt="" class="home-card-thumbnail">
-                    <div class="home-card-content">
-                        <div class="home-card-icon">
-                            <img src="images/house.svg" alt="">
-                        </div>
-                        <h3>Dienste</h3>
-                        <p>Durch unsere Lösungen bieten wir eine Möglichkeit der Unterstützung an, sodass der eigene Lernalltag erleichtert wird.</p>
-                    </div>
-                </a>
-                <a href="events/" class="home-card">
-                    <img src="images/website-project.png" alt="" class="home-card-thumbnail">
-                    <div class="home-card-content">
-                        <div class="home-card-icon">
-                            <img src="images/calendar.svg" alt="">
-                        </div>
-                        <h3>Veranstaltungen</h3>
-                        <p>Wir bieten Veranstaltungen in unterschiedlichen Formaten und Größen an, sodass für jeden etwas dabei ist.</p>
-                    </div>
-                </a>
-                <a href="projects/" class="home-card">
-                    <img src="images/infrastruktur-project.png" alt="" class="home-card-thumbnail">
-                    <div class="home-card-content">
-                        <div class="home-card-icon">
-                            <img src="images/draft.svg" alt="">
-                        </div>
-                        <h3>Projekte</h3>
-                        <p>Abwechslungsreiche Projekte sollen beim gemeinsamen Experimentieren und Lernen im Bereich der Informatik helfen.</p>
-                    </div>
-                </a>
+        <section id="news">
+            <div class="wrapper">
+                <h2>Neuigkeiten</h2>
+                <p>Erhalte die neuesten Informationen, Einblicke, Ankündigungen und Neuigkeiten aus dem Codekreis.</p>
+                <div class="grid-3">
+                    <article class="card news-card">
+                        <strong class="card-annotation">Mo, 1. Juni 2026</strong>
+                        <h3 class="card-title-small">Zwei Jahre Codekreis</h3>
+                        <p>Die Allianz für Informatik, Innovation und Infrastruktur bzw. Codekreis feiert zweijähriges Bestehen.</p>
+                    </article>
+                    <article class="card news-card">
+                        <strong class="card-annotation">Fr, 15. November 2024</strong>
+                        <h3 class="card-title-small">Neuer Name: Codekreis</h3>
+                        <p>Die Allianz für Informatik, Innovation und Infrastruktur arbeitet nun weiter unter dem Namen Codekreis.</p>
+                    </article>
+                    <article class="card news-card">
+                        <strong class="card-annotation">Sa, 1. Juni 2024</strong>
+                        <h3 class="card-title-small">Gründung</h3>
+                        <p>Wir sind eine unabhängige Gruppe aus Bremerhaven, welche sich intensiv mit Informatik beschäftigt.</p>
+                    </article>
+                </div>
             </div>
         </section>
-        <section class="section-center">
-            <div>
-                <h2>Komm in die Gruppe!</h2>
-                <p>Du willst mitmachen? Kein Problem! Auf dem Discord-Server vom Codekreis findest du alles Wichtige über uns, unsere Dienste sowie Projekte und vieles mehr.</p>
-                <a href="https://community.codekreis.de" class="btn">Jetzt beitreten</a>
+        <section id="services">
+            <div class="wrapper">
+                <h2>Unsere Plattformen</h2>
+                <p>Wir entwickeln und betreiben eine unabhängige Infrastruktur, die Informatik zugänglich und leistungsfähig macht. Unsere Plattformen, Tools und Lernumgebungen unterstützen Menschen dabei, schneller zu lernen, besser zu experimentieren und echte Lösungen zu bauen. Hier entsteht die technische Basis für Innovation.</p>
+                <div class="grid-2">
+                    <article class="card service-card">
+                        <img src="../images/cwe-logo.svg" alt="" loading="lazy" height="50">
+                        <h3 class="card-title">CWE-Website</h2>
+                        <p>Die Veranstaltungsseite zum Coding Weekend beinhaltet alle relevanten Informationen wie den Standort, den Zeitraum sowie den Ablauf der Veranstaltung.</p>
+                        <a href="https://cwe.codekreis.de" target="_blank" class="btn">CWE-Website abrufen</a>
+                    </article>
+                    <article class="card service-card">
+                        <img src="../images/logo.svg" alt="" loading="lazy" height="50">
+                        <h3 class="card-title">Website</h2>
+                        <p>Erhalte neueste Informationen zu Diensten, Veranstaltungen und Projekten der Allianz für Informatik, Innovation und Infrastruktur. Lerne unser Team kennen und wie wir an Projekte herangehen.</p>
+                        <a href="https://codekreis.de" target="_blank" class="btn">Website abrufen</a>
+                    </article>
+                </div>
             </div>
         </section>
-        <section class="wrapper" style="margin-bottom: 1em;">
-            <h2>Wir stehen ein für ...</h2>
-            <div class="grid-5">
-                <div class="card card-border">
-                    <h3>Kreh-ativität</h3>
-                    <p>Die Fähigkeiten und Talente jedes Menschen sind besonders und aus diesem Grund schaffen wir spannende Möglichkeiten diese zu nutzen und zu fördern.</p>
+        <section id="events">
+            <div class="wrapper">
+                <h2>Events & Community</h2>
+                <p>Unsere Veranstaltungen bringen Menschen zusammen, die Informatik aktiv gestalten wollen. Workshops, Coding-Sessions, Hackathons und offene Diskussionen schaffen Raum für Austausch, neue Ideen und technische Weiterentwicklung. Wer Innovation sucht, findet sie hier.</p>
+                <div class="grid-4">
+                    <article class="card event-card">
+                        <div class="event-card-header">
+                            <span>Montags, 19:00</span>
+                        </div>
+                        <div class="event-card-body">
+                            <ul class="tags">
+                                <li class="tag">Online</li>
+                            </ul>
+                            <h3 class="card-title-small">Innovationssitzung</h3>
+                            <p>Besprechen von neuen Ideen für Projekte und Planen von Veranstaltungen.</p>
+                        </div>
+                        <div class="event-card-footer">
+                            <a href="https://community.codekreis.de">Jetzt anmelden</a>
+                        </div>
+                    </article>
+                    <div></div>
+                    <div></div>
+                    <div></div>
                 </div>
-                <div class="card card-border">
-                    <h3>Open-Source</h3>
-                    <p>Weil quelloffene Projekte ein essenzieller Bestandteil der Informatik sind, wollen wir diese in Entscheidungsprozesse einbeziehen und Wege zur Unterstützung prüfen.</p>
+            </div>
+        </section>
+        <section id="projects">
+            <div class="wrapper">
+            <h2>Entwicklungen & Ideen</h2>
+            <p>In unseren Projekten entstehen neue Konzepte, Prototypen und Lösungen, die Informatik praktisch voranbringen. Wir experimentieren, entwickeln und testen Technologien, die echte Probleme adressieren. Vielfalt im Team sorgt dafür, dass aus Ideen funktionierende Innovation wird.</p>
+                <div>
+                    <article class="card project-card">
+                        <div>
+                            <strong class="card-annotation">Lokales Netz mit Linux-Servern</strong>
+                            <h3 class="card-title">Infrastruktur</h3>
+                            <p>Aufbau eines eigenen lokalen Netzwerks mit Servern als Grundstein für eine digitale Infrastruktur für Informatikinteressierte und unsere Dienste.</p>
+                            <ul class="tags">
+                                <li class="tag">Proxmox VE</li>
+                                <li class="tag">WireGuard</li>
+                                <li class="tag">Docker</li>
+                                <li class="tag">nginx</li>
+                            </ul>
+                            <a href="https://community.codekreis.de" class="btn">Mehr Erfahren</a>
+                        </div>
+                        <img src="../images/infrastruktur-project.png" alt="" loading="lazy">
+                    </article>
+                    <article class="card project-card">
+                        <div>
+                            <strong class="card-annotation">Plattformübergreifender digitaler Stundenplan</strong>
+                            <h3 class="card-title">Verfrüht</h3>
+                            <p>Kotlin-Anwendung zur modernen Darstellung von benutzerdefinierten Stundenplänen im Web oder auch auf mobilen Endgeräten.</p>
+                            <ul class="tags">
+                                <li class="tag">Kotlin</li>
+                                <li class="tag">Ktor</li>
+                                <li class="tag">FTL</li>
+                                <li class="tag">Bootstrap</li>
+                            </ul>
+                            <a href="https://community.codekreis.de" class="btn">Mehr Erfahren</a>
+                        </div>
+                        <img src="../images/verfrüht-project.png" alt="" loading="lazy">
+                    </article>
+                    <article class="card project-card">
+                        <div>
+                            <strong class="card-annotation">Einstieg in die Spieleentwicklung</strong>
+                            <h3 class="card-title">Verspielt</h3>
+                            <p>Gemeinsames Entdecken und Entwicklen eines Videospiels im Team unter Verwendung einer passenden Engine und Sprache.
+                            </p>
+                            <ul class="tags">
+                                <li class="tag">Godot</li>
+                                <li class="tag">GDScript</li>
+                            </ul>
+                            <a href="https://community.codekreis.de" class="btn">Mehr Erfahren</a>
+                        </div>
+                        <img src="../images/verspielt-project.png" alt="" loading="lazy">
+                    </article>
                 </div>
-                <div class="card card-border">
-                    <h3>Lernen</h3>
-                    <p>Für uns ist selbstverständlich, dass wir uns stets weiterbilden, denn nur so können wir uns den stetig neuen Herausforderungen der Informatik stellen und an ihnen wachsen.</p>
+            </div>
+        </section>
+        <section id="team">
+            <div class="wrapper">
+                <h2>Das sind wir</h2>
+                <p>Wir sind ein Team, das Informatik ernst nimmt und weiterdenkt. Unterschiedliche Hintergründe treffen auf eine gemeinsame Vision: Infrastruktur schaffen, Innovation ermöglichen und Menschen befähigen, mehr zu erreichen. Hier arbeiten Menschen, die Informatik leben.</p>
+                <h3>Der Vorstand</h3>
+                <div class="flex">
+                    <article>
+                        <img src="images/person.svg" alt="Logo von Linus">
+                        <h4 class="card-title-small">Linus Kreh</h4>
+                        <strong class="card-annotation">Vorsitz</strong>
+                        <p>Hier stehen bald nähere Informationen zu dem jeweiligen Mitglied, welche die Aufgaben dieser Person im Team beschreiben.</p>
+                    </article>
+                    <article>
+                        <img src="images/person.svg" alt="Piktogram einer Person">
+                        <h4 class="card-title-small">Hagen</h4>
+                        <strong class="card-annotation">stellv. Vorsitz</strong>
+                        <p>Hier stehen bald nähere Informationen zu dem jeweiligen Mitglied, welche die Aufgaben dieser Person im Team beschreiben.</p>
+                    </article>
+                    <article>
+                        <img src="images/person.svg" alt="Piktogram einer Person">
+                        <h4 class="card-title-small">???</h4>
+                        <strong class="card-annotation">???</strong>
+                        <p>Hier stehen bald nähere Informationen zu dem jeweiligen Mitglied, welche die Aufgaben dieser Person im Team beschreiben.</p>
+                    </article>
                 </div>
-                <div class="card card-border">
-                    <h3>Experimentieren</h3>
-                    <p>Unsere geschaffene Umgebung erlaubt es immer wieder neue Dinge auszuprobieren, schwere Aufgaben zu meistern sowie Fehler zu machen und aus diesen zu lernen.</p>
-                </div>
-                <div class="card card-border">
-                    <h3>Unabhängigkeit und Freiheit</h3>
-                    <p>Die Wahl des eigenen Werkzeugkastens ist so einzigartig wie der Entwickler selbst. Wir wollen daher keineswegs durch Pflichten bei der Auswahl von Werkezeugen limitieren.</p>
-                </div>
-                <div class="card card-border">
-                    <h3>Interesse</h3>
-                    <p>Wer auch in seiner Freizeit gerne mit der Informatik zutun hat, ist bei uns goldrichtig. Mit Spaß und Freude versuchen wir die verschiedensten Ziele zu erreichen.</p>
-                </div>
-                <div class="card card-border">
-                    <h3>Freiwilligkeit und Einsatz</h3>
-                    <p>Unsere Aktivitäten finden auf freiwilliger Basis statt. Es ist selbstverständlich, dass die investierte Zeit jeder Person wertgeschätzt und respektiert wird.</p>
-                </div>
-                <div class="card card-border">
-                    <h3>Verantwortung</h3>
-                    <p>Die Informatik ist in den verschiedensten Bereichen unseres Lebens verankert. Wir sind uns daher bewusst, dass wir bei unseren Aktivitäten diese Landschaft beeinflussen.</p>
-                </div>
-                <div class="card card-border">
-                    <h3>Leidenschaft</h3>
-                    <p>Jede Person in der Informatik hat seine eigene Geschichte hinter sich und hat durch bisherige Erfahrungen eine Leidenschaft für bestimmte Teile der Informatik entwickelt.</p>
-                </div>
-                <div class="card card-border">
-                    <h3>Transparenz</h3>
-                    <p>Im Rahmen von Projektarbeiten und weiterer Aktivitäten sammeln wir Erfahrung. Diese wollen wir mit anderen Interessierten teilen, sodass jede Person mehr erreichen kann.</p>
-                </div>
+                <h3>Unsere Grundsätze</h3>
+                <ul class="principles">
+                    <li class="principle">
+                        <strong>Kreh-ativität</strong>
+                        <p>Die Fähigkeiten und Talente jedes Menschen sind besonders und aus diesem Grund schaffen wir spannende Möglichkeiten diese zu nutzen und zu fördern.</p>
+                    </li>
+                    <li class="principle">
+                        <strong>Open-Source</strong>
+                        <p>Weil quelloffene Projekte ein essenzieller Bestandteil der Informatik sind, wollen wir diese in Entscheidungsprozesse einbeziehen und Wege zur Unterstützung prüfen.</p>
+                    </li>
+                    <li class="principle">
+                        <strong>Lernen</strong>
+                        <p>Für uns ist selbstverständlich, dass wir uns stets weiterbilden, denn nur so können wir uns den stetig neuen Herausforderungen der Informatik stellen und an ihnen wachsen.</p>
+                    </li>
+                    <li class="principle">
+                        <strong>Experimentieren</strong>
+                        <p>Unsere geschaffene Umgebung erlaubt es immer wieder neue Dinge auszuprobieren, schwere Aufgaben zu meistern sowie Fehler zu machen und aus diesen zu lernen.</p>
+                    </li>
+                    <li class="principle">
+                        <strong>Unabhängigkeit und Freiheit</strong>
+                        <p>Die Wahl des eigenen Werkzeugkastens ist so einzigartig wie der Entwickler selbst. Wir wollen daher keineswegs durch Pflichten bei der Auswahl von Werkezeugen limitieren.</p>
+                    </li>
+                    <li class="principle">
+                        <strong>Interesse</strong>
+                        <p>Wer auch in seiner Freizeit gerne mit der Informatik zutun hat, ist bei uns goldrichtig. Mit Spaß und Freude versuchen wir die verschiedensten Ziele zu erreichen.</p>
+                    </li>
+                    <li class="principle">
+                        <strong>Freiwilligkeit und Einsatz</strong>
+                        <p>Unsere Aktivitäten finden auf freiwilliger Basis statt. Es ist selbstverständlich, dass die investierte Zeit jeder Person wertgeschätzt und respektiert wird.</p>
+                    </li>
+                    <li class="principle">
+                        <strong>Verantwortung</strong>
+                        <p>Die Informatik ist in den verschiedensten Bereichen unseres Lebens verankert. Wir sind uns daher bewusst, dass wir bei unseren Aktivitäten diese Landschaft beeinflussen.</p>
+                    </li>
+                    <li class="principle">
+                        <strong>Leidenschaft</strong>
+                        <p>Jede Person in der Informatik hat seine eigene Geschichte hinter sich und hat durch bisherige Erfahrungen eine Leidenschaft für bestimmte Teile der Informatik entwickelt.</p>
+                    </li>
+                    <li class="principle">
+                        <strong>Transparenz</strong>
+                        <p>Im Rahmen von Projektarbeiten und weiterer Aktivitäten sammeln wir Erfahrung. Diese wollen wir mit anderen Interessierten teilen, sodass jede Person mehr erreichen kann.</p>
+                    </li>
+                </ul>
             </div>
         </section>
     </main>
