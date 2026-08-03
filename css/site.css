@@ -1,7 +1,7 @@
 :root {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
-    --clr-header-bg: #1A1A1A;
+    --clr-header-bg: black;
     --clr-header: #BBBBBB;
     --clr-header-hover: white;
     --clr-mobile-nav-bg: #1D1D1D;
@@ -46,6 +46,7 @@ header {
     top: 0;
     width: 100%;
     background-color: var(--clr-header-bg);
+    z-index: 1;
 }
 header .navbar {
     display: flex;
@@ -410,10 +411,25 @@ h3 + p {
 .news-card p {
     margin-bottom: 0;
 }
+.news-card-link {
+    display: flex;
+    padding: 0;
+}
+.news-card-link a {
+    padding: .75rem;
+    text-decoration: none;
+    color: var(--clr-body);
+}
 
 /* News | Desktop */
 @media (min-width: 720px) {
     .news-card {
+        padding: 1rem;
+    }
+    .news-card-link {
+        padding: 0;
+    }
+    .news-card-link a {
         padding: 1rem;
     }
 }
