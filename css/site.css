@@ -59,7 +59,7 @@ header .navbar a {
 }
 header .navbar img {
     padding: 14px;
-    height: 20px;
+    height: 24px;
 }
 header .navbar img:hover {
     filter: brightness(200%);
